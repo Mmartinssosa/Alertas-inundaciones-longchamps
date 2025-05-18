@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas de Inundaciones Longchamps</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPvknHGJwWtJx7GAzgEpGG/eGnKhvG8HQ/WRBRPDx6vLxFvmujBf3l7Uwi9gDuyvCvg=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Alertas de Inundaciones en Longchamps</h1>
+    <div id="mapid"></div>
+    <div id="report-form">
+        <h2>Reportar Inundación</h2>
+        <form id="inundacion-form">
+            <div><label for="latitud">Latitud:</label><input type="text" id="latitud" name="latitud" required></div>
+            <div><label for="longitud">Longitud:</label><input type="text" id="longitud" name="longitud" required></div>
+            <div><label for="nivel">Nivel:</label><input type="text" id="nivel" name="nivel" required></div>
+            <div><label for="hora">Hora (opcional):</label><input type="datetime-local" id="hora" name="hora"></div>
+            <div><label for="comentarios">Comentarios (opcional):</label><textarea id="comentarios" name="comentarios"></textarea></div>
+            <button type="submit">Reportar</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYM81nZPfCxaIK9uJu26zpyGVxyjLqvER1JhvsxXCvC/7vc4a/8FcAd9LmDdmhAhREJ9gnHXYK+jMYWJ1g=="
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
