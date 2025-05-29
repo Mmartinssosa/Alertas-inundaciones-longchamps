@@ -11,7 +11,7 @@ document.getElementById('inundacion-form').addEventListener('submit', function(e
     var hora = document.getElementById('hora').value;
     var comentarios = document.getElementById('comentarios').value;
 
-    fetch('http://127.0.0.1:5000/reportar', {
+    fetch('http://127.0.0.1:8080/reportar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ document.getElementById('inundacion-form').addEventListener('submit', function(e
 });
 
 function cargarReportes() {
-    fetch('http://127.0.0.1:5000/obtener_reportes')
+    fetch('http://127.0.0.1:8080/obtener_reportes')
     .then(response => response.json())
     .then(data => {
         data.forEach(reporte => {
